@@ -1,17 +1,102 @@
-<!DOCTYPE html>
+<!doctype html>
 <html class="page" lang="ru">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>Название проекта</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="preload" href="#" type="font/woff2" as="font">
-    <link rel="stylesheet" href="styles/styles.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="preload" href="#" type="font/woff2" as="font" />
+    <link rel="stylesheet" href="styles/styles.css" />
     <script src="scripts/index.js" defer></script>
   </head>
   <body class="page__body">
-    <header class="header">Шапка</header>
+    <header class="header">
+      <a class="logo" href="#">
+        <img src="" alt="DrinkToGo" width="32" height="36" />
+        <span>Интернет-магазин кофейных напитков</span>
+      </a>
+      <nav class="navigation">
+        <ul class="navigation__site-nav">
+          <li class="navigation__site-item"><a href="#">Главная</a></li>
+          <li class="navigation__site-item"><a href="#">Каталог</a></li>
+          <li class="navigation__site-item"><a href="#">Доставка</a></li>
+          <li class="navigation__site-item"><a href="#">О нас</a></li>
+        </ul>
+        <ul class="navigation__user-nav">
+          <li class="user-navigation__list">
+            <a href="">
+              <span>Войти</span>
+            </a>
+          </li>
+          <li class="user-navigation__list">
+            <a href="">
+              <span>Корзина</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
     <main>
-      <h1>Страница для старта</h1>
+      <!-- <h1>Кофе Drink to go </h1> -->
+      <section class="slider">
+        <ul class="slider__list">
+          <li class="slider__item">
+            <article clas="banner">
+              <h2 class="banner__title">Декаф Флэт Уайт</h2>
+              <img class="banner__img" src="" alt="" width="280" height="380" />
+              <span class="banner__">Новинка!</span>
+              <p class="banner__text">
+                Свежесваренный кофе без кофеина из Эфиопии с натуральным
+                фермерским молоком — то, что нужно для расслабления после
+                тяжёлого рабочего дня
+              </p>
+              <p class="banner__price">
+                <span class="banner__price-value banner__price-value--old"
+                  >295₽</span
+                >
+                <span class="banner__price-value banner__price-value--old"
+                  >225₽</span
+                >
+              </p>
+              <button class="main-button">Заказать</button>
+            </article>
+          </li>
+        </ul>
+        <ul class="slider__pagination">
+          <li class="slider__pagination-item">Первый слайд</li>
+          <li class="slider__pagination-item">Второй слайд</li>
+          <li class="slider__pagination-item">Третий слайд</li>
+        </ul>
+      </section>
+      <section class="advantages">
+        <span class=""></span>
+        <h2 class="advantages__title">Главные причины выбрать Drink2Go</h2>
+        <ul class="advantages__list">
+          <li class="advantages__item advantage">
+            <h3 class="advantage__item">Скорость</h3>
+            <p class="advantage__title">
+              Готовый напиток всегда под рукой — просто открой банку
+            </p>
+          </li>
+          <li class="advantages__item advantage">
+            <h3 class="advantage__item">Удобство</h3>
+            <p class="advantage__title">
+              Легко помещается и в карман, и в маленькую сумочку
+            </p>
+          </li>
+          <li class="advantages__item advantage">
+            <h3 class="advantage__item">Бодрость</h3>
+            <p class="advantage__title">
+              Сбалансированная доза кофеина даст мощный заряд энергии
+            </p>
+          </li>
+          <li class="advantages__item advantage">
+            <h3 class="advantage__item">Экологичность</h3>
+            <p class="advantage__title">
+              Вся упаковка сделана из перерабатываемых материалов
+            </p>
+          </li>
+        </ul>
+      </section>
     </main>
   </body>
 </html>
