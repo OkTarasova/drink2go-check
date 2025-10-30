@@ -1,0 +1,13 @@
+.banner__price-value {
+  line-height: 32px;
+
+  &--old {
+    font-size: $base-font-size;
+
+    color: $primary-color;
+  }
+
+  &--new {
+    font-size: 20px;
+  }
+}

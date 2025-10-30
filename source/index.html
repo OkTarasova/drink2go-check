@@ -2,48 +2,83 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <title>Название проекта</title>
+    <title>DrinkToGo</title>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <link rel="preload" href="#" type="font/woff2" as="font" />
     <link rel="stylesheet" href="styles/styles.css" />
     <script src="scripts/index.js" defer></script>
+    <link
+      rel="preload"
+      href="/source/fonts/Montserrat-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="/source/fonts/Montserrat-Medium.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="/source/fonts/Montserrat-SemiBold.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="/source/fonts/Montserrat-Bold.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
   </head>
   <body class="page__body">
-    <header class="header">
-      <a class="logo" href="#">
-        <img src="" alt="DrinkToGo" width="32" height="36" />
+    <header class="main-header">
+      <a class="main-header__logo" href="#">
+        <img src="#" alt="DrinkToGo" width="32" height="36" />
         <span>Интернет-магазин кофейных напитков</span>
       </a>
-      <nav class="navigation">
-        <ul class="navigation__site-nav">
-          <li class="navigation__site-item"><a href="#">Главная</a></li>
-          <li class="navigation__site-item"><a href="#">Каталог</a></li>
-          <li class="navigation__site-item"><a href="#">Доставка</a></li>
-          <li class="navigation__site-item"><a href="#">О нас</a></li>
+      <nav class="main-nav">
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item"><a href="#">Главная</a></li>
+          <li class="site-list__item site-list__item--current">
+            <a href="#">Каталог</a>
+          </li>
+          <li class="site-list__item"><a href="#">Доставка</a></li>
+          <li class="site-list__item"><a href="#">О нас</a></li>
         </ul>
-        <ul class="navigation__user-nav">
-          <li class="user-navigation__list">
-            <a href="">
+        <ul class="main-nav__list user-list">
+          <li class="user-list__item">
+            <a href="#">
               <span>Войти</span>
             </a>
           </li>
-          <li class="user-navigation__list">
-            <a href="">
+          <li class="user-list__item">
+            <a href="#">
               <span>Корзина</span>
             </a>
           </li>
         </ul>
       </nav>
     </header>
-    <main>
+    <main class="main-container">
       <!-- <h1>Кофе Drink to go </h1> -->
       <section class="slider">
-        <ul class="slider__list">
+        <ul class="slider">
           <li class="slider__item">
-            <article clas="banner">
+            <article class="banner">
+              <img
+                class="banner__img"
+                src="#"
+                alt=""
+                width="280"
+                height="380"
+              />
               <h2 class="banner__title">Декаф Флэт Уайт</h2>
-              <img class="banner__img" src="" alt="" width="280" height="380" />
-              <span class="banner__">Новинка!</span>
+              <span class="badge">Новинка!</span>
               <p class="banner__text">
                 Свежесваренный кофе без кофеина из Эфиопии с натуральным
                 фермерским молоком — то, что нужно для расслабления после
@@ -53,7 +88,7 @@
                 <span class="banner__price-value banner__price-value--old"
                   >295₽</span
                 >
-                <span class="banner__price-value banner__price-value--old"
+                <span class="banner__price-value banner__price-value--new"
                   >225₽</span
                 >
               </p>
@@ -61,42 +96,247 @@
             </article>
           </li>
         </ul>
-        <ul class="slider__pagination">
-          <li class="slider__pagination-item">Первый слайд</li>
-          <li class="slider__pagination-item">Второй слайд</li>
-          <li class="slider__pagination-item">Третий слайд</li>
-        </ul>
+        <p class="slider__toggles">
+          <button class="slider__toggle slider__toggle--current">1</button>
+          <button class="slider__toggle">2</button>
+          <button class="slider__toggle">3</button>
+        </p>
       </section>
-      <section class="advantages">
-        <span class=""></span>
-        <h2 class="advantages__title">Главные причины выбрать Drink2Go</h2>
-        <ul class="advantages__list">
-          <li class="advantages__item advantage">
-            <h3 class="advantage__item">Скорость</h3>
-            <p class="advantage__title">
-              Готовый напиток всегда под рукой — просто открой банку
+      <section class="section advantages">
+        <div class="container">
+          <h2 class="section__title badge">Преимущества</h2>
+          <span class="section__intro">Главные причины выбрать Drink2Go</span>
+          <ul class="advantages__list">
+            <li class="advantages__item advantages__item--speed">
+              <h3 class="advantages__title">Скорость</h3>
+              <p class="advantages__text">
+                Готовый напиток всегда под рукой — просто открой банку
+              </p>
+            </li>
+            <li class="advantages__item advantages__item--convenience">
+              <h3 class="advantages__title">Удобство</h3>
+              <p class="advantages__text">
+                Легко помещается и в карман, и в маленькую сумочку
+              </p>
+            </li>
+            <li class="advantages__item advantages__item--cheerfulness">
+              <h3 class="advantages__title">Бодрость</h3>
+              <p class="advantages__text">
+                Сбалансированная доза кофеина даст мощный заряд энергии
+              </p>
+            </li>
+            <li class="advantages__item advantages__item--eco">
+              <h3 class="advantages__title">Экологичность</h3>
+              <p class="advantages__text">
+                Вся упаковка сделана из перерабатываемых материалов
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="section catalog">
+        <div class="container">
+          <h2 class="section__title badge">Каталог</h2>
+          <span class="section__intro">Каталог кофейных напитков</span>
+          <div class="catalog__filter"></div>
+          <div class="catalog__products-wrapper">
+            <p class="catalog__sorting">
+              Сортировка
+              <select name="select" id="select"></select>
             </p>
-          </li>
-          <li class="advantages__item advantage">
-            <h3 class="advantage__item">Удобство</h3>
-            <p class="advantage__title">
-              Легко помещается и в карман, и в маленькую сумочку
-            </p>
-          </li>
-          <li class="advantages__item advantage">
-            <h3 class="advantage__item">Бодрость</h3>
-            <p class="advantage__title">
-              Сбалансированная доза кофеина даст мощный заряд энергии
-            </p>
-          </li>
-          <li class="advantages__item advantage">
-            <h3 class="advantage__item">Экологичность</h3>
-            <p class="advantage__title">
-              Вся упаковка сделана из перерабатываемых материалов
-            </p>
-          </li>
-        </ul>
+            <ul class="products__list">
+              <li class="products__item">
+                <article class="product">
+                  <h3 class="product__title">Декаф Флэт Уайт</h3>
+                  <img
+                    class="product__img"
+                    src="#"
+                    alt=""
+                    width="130"
+                    height="188"
+                  />
+                  <p class="product__description">
+                    Кофе без кофеина из Эфиопии с натуральным фермерским молоком
+                  </p>
+                  <span class="products__price">225₽</span>
+                  <button class="main-button">В корзину</button>
+                </article>
+              </li>
+              <li class="products__item">
+                <article class="product">
+                  <h3 class="product__title">Декаф Флэт Уайт</h3>
+                  <img
+                    class="product__img"
+                    src="#"
+                    alt=""
+                    width="130"
+                    height="188"
+                  />
+                  <p class="product__description">
+                    Кофе без кофеина из Эфиопии с натуральным фермерским молоком
+                  </p>
+                  <span class="products__price">225₽</span>
+                  <button class="main-button">В корзину</button>
+                </article>
+              </li>
+              <li class="products__item">
+                <article class="product">
+                  <h3 class="product__title">Декаф Флэт Уайт</h3>
+                  <img
+                    class="product__img"
+                    src="#"
+                    alt=""
+                    width="130"
+                    height="188"
+                  />
+                  <p class="product__description">
+                    Кофе без кофеина из Эфиопии с натуральным фермерским молоком
+                  </p>
+                  <span class="products__price">225₽</span>
+                  <button class="main-button">В корзину</button>
+                </article>
+              </li>
+              <li class="products__item">
+                <article class="product">
+                  <h3 class="product__title">Декаф Флэт Уайт</h3>
+                  <img
+                    class="product__img"
+                    src="#"
+                    alt=""
+                    width="130"
+                    height="188"
+                  />
+                  <p class="product__description">
+                    Кофе без кофеина из Эфиопии с натуральным фермерским молоком
+                  </p>
+                  <span class="products__price">225₽</span>
+                  <button class="main-button">В корзину</button>
+                </article>
+              </li>
+              <li class="products__item">
+                <article class="product">
+                  <h3 class="product__title">Декаф Флэт Уайт</h3>
+                  <img
+                    class="product__img"
+                    src="#"
+                    alt=""
+                    width="130"
+                    height="188"
+                  />
+                  <p class="product__description">
+                    Кофе без кофеина из Эфиопии с натуральным фермерским молоком
+                  </p>
+                  <span class="products__price">225₽</span>
+                  <button class="main-button">В корзину</button>
+                </article>
+              </li>
+              <li class="products__item">
+                <article class="product">
+                  <h3 class="product__title">Декаф Флэт Уайт</h3>
+                  <img
+                    class="product__img"
+                    src="#"
+                    alt=""
+                    width="130"
+                    height="188"
+                  />
+                  <p class="product__description">
+                    Кофе без кофеина из Эфиопии с натуральным фермерским молоком
+                  </p>
+                  <span class="products__price">225₽</span>
+                  <button class="main-button">В корзину</button>
+                </article>
+              </li>
+
+              <li class="products__item">
+                <article class="product">
+                  <h3 class="product__title">Декаф Флэт Уайт</h3>
+                  <img
+                    class="product__img"
+                    src="#"
+                    alt=""
+                    width="130"
+                    height="188"
+                  />
+                  <p class="product__description">
+                    Кофе без кофеина из Эфиопии с натуральным фермерским молоком
+                  </p>
+                  <span class="products__price">225₽</span>
+                  <button class="main-button">В корзину</button>
+                </article>
+              </li>
+            </ul>
+            <ul class="catalog__pagination">
+              <li class="catalog__pagination-item"><a href="#">Назад</a></li>
+              <li class="catalog__pagination-item"><a href="#">1</a></li>
+              <li
+                class="catalog__pagination-item catalog__pagination-item--current"
+              >
+                <a href="#">2</a>
+              </li>
+              <li class="catalog__pagination-item"><a href="#">3</a></li>
+              <li class="catalog__pagination-item"><a href="#">Вперёд</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="map">
+        <h2 class="visually-hidden">Наш магазин на карте</h2>
       </section>
     </main>
+    <footer class="footer">
+      <div class="container">
+        <img class="footer__logo" src="#" alt="" width="82" height="36" />
+        <ul class="footer__social social">
+          <li class="social__item">
+            <a class="social__link social__link--vk" href="#"
+              >Давайте дружить VK</a
+            >
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--pinterest" href="#"
+              >Следите за нами в Pinterest</a
+            >
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--ok" href="#"
+              >Давайте дружить Одноклассниках</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="footer__nav">
+        <b>Интернет-магазин</b>
+        <nav class="">
+          <ul class="footer__nav-list">
+            <li class="footer__nav-item">Каталог</li>
+            <li class="footer__nav-item">Доставка</li>
+            <li class="footer__nav-item">Способы оплаты</li>
+            <li class="footer__nav-item">О нас</li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer__media">
+        <b>Медиа</b>
+        <ul class="footer__list">
+          <li class="footer__item">Блог</li>
+          <li class="footer__item">Информация для СМИ</li>
+          <li class="footer__item">Правовая информация</li>
+        </ul>
+      </div>
+      <div class="footer__contacts contacts">
+        <b class="contacts__title">Контакты</b>
+        <p class="contacts__text">
+          Санкт-Петербург, набережная реки Карповки, дом 5
+        </p>
+        <a class="contacts__phone" href="tel:+79999999999"
+          >+7 (999) 999-99-99</a
+        >
+      </div>
+      <p class="footer__copyright copyright">
+        Разработано в
+        <a href="#">HTML Academy</a>
+      </p>
+    </footer>
   </body>
 </html>

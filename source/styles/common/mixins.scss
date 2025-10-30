@@ -1,0 +1,15 @@
+@mixin font-face($url, $weight) {
+  @font-face {
+    font-family: "Montserrat";
+    font-weight: $weight;
+    src: url($url) format("woff2");
+    font-display: swap;
+    font-style: normal;
+  }
+}
+
+@mixin list-style-reset {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
