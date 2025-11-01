@@ -1,3 +1,234 @@
-.footer__list {
+.footer {
+  margin: 0 auto;
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 318px 1fr;
+    padding: 40px 0;
+    max-width: 1360px;
+    gap: 0 30px;
+  }
+}
+
+.footer__top-line {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+
+  @media (min-width: $tablet-width) {
+    padding: 41px 20px 15px;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: column;
+    gap: 50px;
+    padding: 0;
+  }
+}
+
+.footer__logo {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 20px;
+  color: $base-black;
+}
+
+.footer__logo-text {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+}
+
+.footer__logo:hover,
+.footer__logo:focus {
+  opacity: 0.8;
+}
+
+.footer__logo:active {
+  opacity: 0.6;
+}
+
+.footer__middle-line {
+  padding: 0 20px;
+  border-top: 1px solid $base-secondary;
+  border-bottom: 1px solid $base-secondary;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(3, 223px);
+    justify-content: center;
+    gap: 30px;
+    border: none;
+    padding: 15px 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+    justify-content: start;
+    grid-template-columns: repeat(3, 318px);
+  }
+}
+
+.footer__middle-line:not(:last-child) {
+  border-bottom: 1px solid $base-secondary;
+
+  @media (min-width: $tablet-width) {
+    border-bottom: none;
+  }
+}
+
+.footer__nav {
+  padding: 20px 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 9px 0;
+  }
+}
+
+.footer__nav-list {
   @include list-style-reset;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.footer__nav-link {
+  font-size: 12px;
+  line-height: 16px;
+  padding: 8px 0;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  color: $base-black;
+  display: block;
+}
+
+.footer__title {
+  margin: 0;
+  margin-bottom: 12px;
+  font-size: 14px;
+  line-height: 20px;
+  color: $base-primary;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.footer__media {
+  padding: 21px 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 9px 0;
+  }
+}
+
+.footer__media-list {
+  @include list-style-reset;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.footer__media-link {
+  font-size: 12px;
+  line-height: 16px;
+  padding: 8px 0;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  color: $base-black;
+  display: block;
+}
+
+.footer__contacts {
+  padding: 20px 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 9px 0;
+  }
+}
+
+.footer__link:hover,
+.footer__link:focus {
+  color: $primary-lighter;
+}
+
+.footer__link:active {
+  color: $primary-darker;
+}
+
+.footer__copyright {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 20px 20px 30px;
+  text-align: center;
+  color: $base-grey;
+  width: fit-content;
+  margin: 0 auto;
+  font-size: 12px;
+  line-height: 16px;
+
+  @media (min-width: $tablet-width) {
+    padding: 15px 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 15px 20px;
+    grid-column: 1/-1;
+  }
+}
+
+.footer__copyright-link {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: $base-grey;
+  text-decoration: none;
+}
+
+.footer__copyright-link::after {
+  content: "";
+  width: 12px;
+  height: 16px;
+  mask-image: url("../../icons/logo-html.svg");
+  mask-repeat: no-repeat;
+  mask-position: center;
+  background-color: $base-grey;
+}
+
+.footer__copyright-link:hover,
+.footer__copyright-link:focus {
+  color: $base-primary;
+}
+
+.footer__copyright-link:active {
+  color: $primary-darker;
+}
+
+.footer__copyright-link:hover::after,
+.footer__copyright-link:focus::after {
+  background-color: $base-primary;
+}
+
+.footer__copyright-link:active::after {
+  background-color: $primary-darker;
 }

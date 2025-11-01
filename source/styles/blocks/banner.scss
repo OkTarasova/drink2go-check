@@ -1,13 +1,161 @@
+.banner {
+  padding: 20px 0 60px;
+  height: 100%;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    padding-top: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 30px 0 84px;
+  }
+}
+
+.banner .container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+
+  @media (min-width: $tablet-width) {
+    gap: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+    gap: 30px;
+    padding: 0 65px;
+    align-items: flex-start;
+  }
+}
+
+.banner--flat-white {
+  background: $flat-white;
+
+  @media (min-width: $tablet-width) {
+    background: linear-gradient($flat-white 640px, $base-white 640px);
+  }
+
+  @media (min-width: $desktop-width) {
+    background: $flat-white;
+  }
+}
+
+.banner--latte {
+  background: $lavender-latte;
+
+  @media (min-width: $tablet-width) {
+    background: linear-gradient($lavender-latte 640px, $base-white 640px);
+  }
+
+  @media (min-width: $desktop-width) {
+    background: $lavender-latte;
+  }
+}
+
+.banner--espresso {
+  background: $espresso;
+
+  @media (min-width: $tablet-width) {
+    background: linear-gradient($espresso 640px, $base-white 640px);
+  }
+
+  @media (min-width: $desktop-width) {
+    background: $espresso;
+  }
+}
+
+.banner__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    order: -1;
+  }
+
+  @media (min-width: $desktop-width) {
+    order: revert;
+    align-items: flex-start;
+    padding-top: 150px;
+  }
+}
+
+.banner__badge {
+  margin-bottom: 4px;
+}
+
+.banner__title {
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 36px;
+  line-height: 48px;
+  letter-spacing: 0.02em;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 56px;
+    line-height: 80px;
+    margin-bottom: 16px;
+  }
+}
+
+.banner__text {
+  margin: 0;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 20px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 61px;
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+    text-align: left;
+    margin-bottom: 40px;
+  }
+}
+
+.banner__footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 25px;
+  gap: 22px;
+
+  @media (min-width: $tablet-width) {
+    justify-content: center;
+    gap: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    justify-content: flex-start;
+    padding: 0;
+    gap: 23px;
+  }
+}
+
+.banner__price {
+  max-width: 110px;
+  margin: 0;
+}
+
 .banner__price-value {
+  font-size: 16px;
   line-height: 32px;
 
   &--old {
-    font-size: $base-font-size;
-
-    color: $primary-color;
+    text-decoration: line-through;
+    color: $base-primary;
   }
 
   &--new {
     font-size: 20px;
+    font-weight: 600;
   }
 }

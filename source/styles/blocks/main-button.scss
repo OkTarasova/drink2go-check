@@ -1,10 +1,23 @@
 .main-button {
   padding: 8px 20px;
-  color: $white;
+  color: $base-white;
   border: none;
   border-radius: 4px;
-  background-color: $primary-color;
+  background-color: $base-primary;
   font-family: $base-font;
   font-size: 16px;
   line-height: 24px;
+}
+
+.main-button:hover,
+.main-button:focus {
+  background-color: $primary-lighter;
+}
+
+.main-button:active {
+  background-color: $primary-darker;
+}
+
+.main-button:disabled {
+  background-color: $base-grey;
 }

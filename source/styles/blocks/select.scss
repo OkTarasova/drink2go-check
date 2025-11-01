@@ -1,0 +1,16 @@
+.select {
+  border: none;
+  background-color: transparent;
+  appearance: none;
+  font-family: $base-font;
+  font-size: 16px;
+  line-height: 24px;
+  color: $base-primary;
+  text-transform: lowercase;
+  font-weight: 600;
+  padding: 4px 0;
+  background-image: url("../../images/arrow-pagination.svg");
+  background-size: 10px;
+  background-repeat: no-repeat;
+  background-position: 135px center;
+}

@@ -1,3 +1,30 @@
 .social {
   @include list-style-reset;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 160px;
+}
+
+.social__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 40px;
+  height: 40px;
+  padding: 5px;
+  color: $base-grey;
+  border-radius: 4px;
+}
+
+.social__link:hover,
+.social__link:focus {
+  color: $base-primary;
+  background-color: $base-secondary;
+}
+
+.social__link:active {
+  color: $base-primary;
+  background-color: $primary-opacity;
 }

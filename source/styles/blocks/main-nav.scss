@@ -1,0 +1,10 @@
+.main-nav {
+  display: flex;
+  gap: 60px;
+
+  @media (min-width: $desktop-width) {
+    gap: 120px;
+    justify-content: space-between;
+    flex-grow: 1;
+  }
+}

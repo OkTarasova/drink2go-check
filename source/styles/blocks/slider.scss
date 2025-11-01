@@ -1,0 +1,90 @@
+.slider {
+  position: relative;
+}
+
+.slider__list {
+  @include list-style-reset;
+  display: flex;
+  overflow: hidden;
+  width: 300%;
+}
+
+.slider__item {
+  width: 100vw;
+}
+
+.slider__toggles {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    bottom: 67px;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    @include list-style-reset;
+    display: flex;
+    gap: 8px;
+  }
+}
+
+.slider__toggle {
+  border: none;
+  background-color: $base-white;
+  padding: 0;
+  width: 62px;
+  height: 4px;
+  cursor: pointer;
+}
+
+.slider__toggle--active {
+  background-color: $base-primary;
+}
+
+.slider__button {
+  position: absolute;
+  height: 100%;
+  padding: 0;
+  background-color: transparent;
+  top: 0;
+  width: 20px;
+  cursor: pointer;
+  border: none;
+  color: $base-primary;
+
+  @media (min-width: $tablet-width) {
+    width: 80px;
+    height: 640px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 100%;
+  }
+}
+
+.slider__button--prev {
+  left: 0;
+}
+
+.slider__button--next {
+  right: 0;
+
+  transform: rotate(180deg);
+}
+
+.slider__button:hover,
+.slider__button:focus {
+  background: linear-gradient(90deg, $base-white, rgba(255, 255, 255, 0));
+}
+
+.slider__button:active {
+  background: linear-gradient(
+    90deg,
+    rgba(120, 89, 207, 0.25),
+    rgba(120, 89, 207, 0)
+  );
+}
+
+.slider__button:disabled {
+  color: $base-grey;
+}
